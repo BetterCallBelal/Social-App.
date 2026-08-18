@@ -1,16 +1,16 @@
 import React from 'react'
-
+import { ZodiacCancer } from 'lucide-react';
 export default function Footer() {
   return (
     <footer
-      className="bg-neutral-200 text-center dark:bg-neutral-700 lg:text-left">
-      <div className="p-4 text-center text-neutral-700 dark:text-neutral-200">
-        © 2023 Copyright:
-        <a
-          className="text-neutral-800 dark:text-neutral-400"
-          href="https://tw-elements.com/"
-        >TW Elements</a>
-      </div>
+      className="">
+     <div
+     className='flex mx-166 mt-2.5 font-bold '>
+        <ZodiacCancer size={32} color="#ff00ea" />
+  <span className="self-center ms-1.5 text-xl font-bold whitespace-nowrap dark:text-white">
+    Social App
+  </span>
+     </div>
     </footer>
   )
 }

@@ -13,6 +13,7 @@ import Home from './Components/Home'
 import Layout from './Components/Layout'
 import Profile from './Components/Profile'
 import NotFound from './Components/NotFound'
+import { useNetworkState } from 'react-use'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import axios from 'axios';
 import { CounterContext } from './Contexts/TokenContext'
@@ -22,6 +23,7 @@ import ProtectAuth from './ProtectRoute/ProtectAuth'
 import { QueryClientProvider , QueryClient} from '@tanstack/react-query'
 const queryclient = new QueryClient()
  import { ToastContainer, toast } from 'react-toastify';
+import { ZodiacCancer } from 'lucide-react'
 const router = createBrowserRouter ( [
   {path : "/" , element : <Layout/> , children:[
     { index : true, element : <ProtectRoute><Home /></ProtectRoute> },
@@ -42,10 +44,12 @@ const router = createBrowserRouter ( [
 
 
 function App() {
-  
+ let {online }= useNetworkState()
 
   return (
    <>
+   {!online ?   <div className='min-h-screen bg-gray-300 flex  justify-center items-center inset-0 fixed '><h2 className=' text-3xl flex'><ZodiacCancer size={50} color="#ff00ea" />Network Issue... </h2></div>
+:null}
    <QueryClientProvider client={queryclient}>
     <CounterContextProvider >
        <RouterProvider router={router}/>

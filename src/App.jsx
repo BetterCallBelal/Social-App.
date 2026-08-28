@@ -48,7 +48,7 @@ function App() {
 
   return (
    <>
-   {!online ?   <div className='min-h-screen bg-gray-300 flex  zIndex: 1  justify-center items-center inset-0 fixed '><h2 className=' text-3xl flex'><ZodiacCancer size={50} color="#ff00ea" />Network Issue... </h2></div>
+   {!online ?   <div className='min-h-screen bg-gray-300 flex  z-50  justify-center items-center inset-0 fixed '><h2 className=' text-3xl flex'><ZodiacCancer size={50} color="#ff00ea" />Network Issue... </h2></div>
 :null}
    <QueryClientProvider client={queryclient}>
     <CounterContextProvider >

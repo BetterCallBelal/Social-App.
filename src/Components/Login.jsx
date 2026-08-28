@@ -87,7 +87,7 @@ function logform(UserData) {
               <div className="mb-6 text-center">
                 <button 
                       className="w-full px-4 py-2 font-bold text-white bg-purple-800 rounded-full hover:bg-blue-700 dark:bg-purple-900 dark:text-white dark:hover:bg-purple-950 focus:outline-none focus:shadow-outline" 
-                     type='submit'
+                     
                       isdisabled={Loading} type='submit'>{Loading? "اصبر شويه...":"Log In!"}
                     </button>
               </div>
